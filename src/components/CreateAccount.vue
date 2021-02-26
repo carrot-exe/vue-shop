@@ -92,11 +92,13 @@ export default {
 
       this.errorMessage = [];
 
+/*
       if (this.user.firstName.length < 5) {
         this.errorMessage.push(
           "FirstName should contains more than 5 character"
         );
       }
+*/
 
       if (this.ValidateEmail(this.user.email) === false) {
         this.errorMessage.push("Please provide a valid Email address");

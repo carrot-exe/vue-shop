@@ -40,7 +40,7 @@
             <a href="javascript:;;" @click="toggleForm">Sign in</a>
           </span>
           <span v-if="!isSignUp">
-            New to ikismail?
+            New to shopping website?
             <a href="javascript:;;" @click="toggleForm">Create an Account</a>
           </span>
         </p>
