@@ -10,6 +10,15 @@ var ShippingDetailSchema = new Schema({
     products: Array,
     userId: String,
     totalPrice: String
-})
+});
+
+new ShippingDetails({address1: String,
+    address2: String,
+    country: String,
+    zipCode: String,
+    shippingDate: String,
+    products: Array,
+    userId: String,
+    totalPrice: String}).save();
 
 module.exports = mongoose.model('ShippingDetail', ShippingDetailSchema)
