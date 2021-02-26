@@ -43,32 +43,32 @@
 </template>
 
 <script>
-import CreateProduct from "../actions/CreateProduct";
-import { mapState } from "vuex";
+import CreateProduct from '../actions/CreateProduct'
+import { mapState } from 'vuex'
 export default {
-  name: "productFilter",
-  props: ["categories", "sellers"],
+  name: 'productFilter',
+  props: ['categories', 'sellers'],
   components: { CreateProduct },
-  computed: mapState(["loggedUser"]),
-  data() {
+  computed: mapState(['loggedUser']),
+  data () {
     return {
-      selectedCategory: "All",
-      selectedSeller: "All",
+      selectedCategory: 'All',
+      selectedSeller: 'All',
       showCreateProductModal: false
-    };
+    }
   },
   methods: {
     // This method will trigger the parent Components (Prodcuts Component) function
-    updateProductCategory(event, productFilterID) {
-      this.$parent.filterProductBy(event, productFilterID);
+    updateProductCategory (event, productFilterID) {
+      this.$parent.filterProductBy(event, productFilterID)
     },
 
     // This method will trigger the function in createProduct Component
-    openCreateModal() {
-      this.$refs.createProduct.showModalForm();
+    openCreateModal () {
+      this.$refs.createProduct.showModalForm()
     }
   }
-};
+}
 </script>
 
 <style lang="scss">
